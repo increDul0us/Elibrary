@@ -1,0 +1,19 @@
+{
+  "name": "elibrary",
+  "version": "1.0.0",
+  "description": "This is a system whereby students can borrow books available in a school library and record will be taken on such borrowed book. The system shows available and borrowed books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/increDul0us/Elibrary.git"
+  },
+  "author": "incredulous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/increDul0us/Elibrary/issues"
+  },
+  "homepage": "https://github.com/increDul0us/Elibrary#readme"
+}
