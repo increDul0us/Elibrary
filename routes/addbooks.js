@@ -1,22 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+// Load Book model
+const Book = require('../models/Book');
 
+router.get('/', (req, res) => res.render('addbooks'))
 
-//Welcome
-router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
-
-// Dashboard
-router.get('/dashboard', ensureAuthenticated, (req, res) =>
-  res.render('dashboard', {
-    user: req.user
-  })
-);
-
-
-/*router.get('/addbooks', (req, res) => res.render('addbooks'))
-
-router.post('/addbooks', (req, res) =>{
+router.post('/', (req, res) =>{
   const { title, description} = req.body;
   let errors = [];
 
@@ -55,5 +44,6 @@ router.post('/addbooks', (req, res) =>{
               .catch(err => console.log(err));
           };
       });
-  }})*/
+  }})
+
 module.exports = router;
