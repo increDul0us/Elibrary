@@ -2,7 +2,12 @@
 <p class="lead mb-3">Here is the list of books in the Library</p>
 
     <div>
-        <p> <a href="#"><%= books.title %></a></p>
-        <p><%= books.description %></p>
-        <hr>
+    <h1>Recent Blog Posts</h1>
+    <% for(let i = 0; i < books.length; i++) { %>
+        <article>
+            <h2><%= books[i].title %></h2>
+            <p><%= books[i].body %></p>
+        </article>
+    <% } %>
     </div>
+
